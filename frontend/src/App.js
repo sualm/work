@@ -2,7 +2,12 @@ import React from 'react';
 import "./App.css";
 import  { useEffect } from "react";
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
-import {LoginPage ,SignupPage,ActivationPage,HomePage,ProductsPage} from "./Routes.js";
+import {LoginPage ,
+  SignupPage,
+  ActivationPage,
+  HomePage,
+  ProductsPage,
+  ProfilePage} from "./Routes.js";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -30,6 +35,7 @@ const App = () =>{
         <Route path='/sign-up' element={<SignupPage/>} />
         <Route path='/activation/:activation_token' element={<ActivationPage/>} />
         <Route path='/products' element={<ProductsPage />} />
+        <Route path='/profile' element={<ProfilePage />} />
 
       </Routes>
       <ToastContainer
